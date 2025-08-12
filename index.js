@@ -10,9 +10,11 @@ const orderRoutes = require('./routes/orderRoutes');
 const simulationRoutes = require("./routes/simulationRoutes")
 const cookieParser = require('cookie-parser');
 app.use(express.json())
+
+
 app.use(cors({
-  origin: 'http://localhost:5173', // Explicitly allow your frontend origin
-  credentials: true                // Allow cookies & credentials
+  origin: ["http://localhost:5173", "https://greencart12.netlify.app"],
+  credentials: true
 }));
 const PORT = process.env.PORT;
 console.log(PORT)
